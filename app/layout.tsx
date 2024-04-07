@@ -21,7 +21,7 @@ export default async function RootLayout({
 }) {
   return (
     <ClerkProvider>
-      <html lang="en">
+      <html lang="pt-BR">
         <body className={inter.className}>
           <ThemeProvider 
             attribute="class" 

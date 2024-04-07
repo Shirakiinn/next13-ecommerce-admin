@@ -47,10 +47,10 @@ export const CategoryForm: React.FC<CategoryFormProps> = ({
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const title = initialData ? 'Edit category' : 'Create category';
-  const description = initialData ? 'Edit a category.' : 'Add a new category';
-  const toastMessage = initialData ? 'Category updated.' : 'Category created.';
-  const action = initialData ? 'Save changes' : 'Create';
+  const title = initialData ? 'Editar categoria' : 'Criar categoria';
+  const description = initialData ? 'Editar a categoria.' : 'Adicionar uma nova categoria';
+  const toastMessage = initialData ? 'Categoria atualizada.' : 'Categoria criada.';
+  const action = initialData ? 'Salvar alterações' : 'Criar';
 
   const form = useForm<CategoryFormValues>({
     resolver: zodResolver(formSchema),
@@ -72,7 +72,7 @@ export const CategoryForm: React.FC<CategoryFormProps> = ({
       router.push(`/${params.storeId}/categories`);
       toast.success(toastMessage);
     } catch (error: any) {
-      toast.error('Something went wrong.');
+      toast.error('Algo deu errado.');
     } finally {
       setLoading(false);
     }
@@ -84,7 +84,7 @@ export const CategoryForm: React.FC<CategoryFormProps> = ({
       await axios.delete(`/api/${params.storeId}/categories/${params.categoryId}`);
       router.refresh();
       router.push(`/${params.storeId}/categories`);
-      toast.success('Category deleted.');
+      toast.success('Categoria apagada.');
     } catch (error: any) {
       toast.error('Make sure you removed all products using this category first.');
     } finally {
@@ -125,7 +125,7 @@ export const CategoryForm: React.FC<CategoryFormProps> = ({
                 <FormItem>
                   <FormLabel>Name</FormLabel>
                   <FormControl>
-                    <Input disabled={loading} placeholder="Category name" {...field} />
+                    <Input disabled={loading} placeholder="Nome da categoria" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -140,7 +140,7 @@ export const CategoryForm: React.FC<CategoryFormProps> = ({
                   <Select disabled={loading} onValueChange={field.onChange} value={field.value} defaultValue={field.value}>
                     <FormControl>
                       <SelectTrigger>
-                        <SelectValue defaultValue={field.value} placeholder="Select a billboard" />
+                        <SelectValue defaultValue={field.value} placeholder="Selecione um banner" />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>

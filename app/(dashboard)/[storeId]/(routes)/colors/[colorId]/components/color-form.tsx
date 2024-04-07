@@ -46,10 +46,10 @@ export const ColorForm: React.FC<ColorFormProps> = ({
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const title = initialData ? 'Edit color' : 'Create color';
-  const description = initialData ? 'Edit a color.' : 'Add a new color';
-  const toastMessage = initialData ? 'Color updated.' : 'Color created.';
-  const action = initialData ? 'Save changes' : 'Create';
+  const title = initialData ? 'Editar color' : 'Create color';
+  const description = initialData ? 'Editar a cor.' : 'Adicionar uma nova color.';
+  const toastMessage = initialData ? 'Color updated.' : 'Cor criada.';
+  const action = initialData ? 'Save changes' : 'Criar';
 
   const form = useForm<ColorFormValues>({
     resolver: zodResolver(formSchema),

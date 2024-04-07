@@ -45,10 +45,10 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const title = initialData ? 'Edit billboard' : 'Create billboard';
-  const description = initialData ? 'Edit a billboard.' : 'Add a new billboard';
-  const toastMessage = initialData ? 'Billboard updated.' : 'Billboard created.';
-  const action = initialData ? 'Save changes' : 'Create';
+  const title = initialData ? 'Editar banner' : 'Criar banner';
+  const description = initialData ? 'Editar um banner.' : 'Adicionar novo banner.';
+  const toastMessage = initialData ? 'Banner atualizado.' : 'Banner criado.';
+  const action = initialData ? 'Salvar alterações' : 'Criar';
 
   const form = useForm<BillboardFormValues>({
     resolver: zodResolver(formSchema),
@@ -70,7 +70,7 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
       router.push(`/${params.storeId}/billboards`);
       toast.success(toastMessage);
     } catch (error: any) {
-      toast.error('Something went wrong.');
+      toast.error('Algo deu errado.');
     } finally {
       setLoading(false);
     }
@@ -82,9 +82,9 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
       await axios.delete(`/api/${params.storeId}/billboards/${params.billboardId}`);
       router.refresh();
       router.push(`/${params.storeId}/billboards`);
-      toast.success('Billboard deleted.');
+      toast.success('Banner apagado.');
     } catch (error: any) {
-      toast.error('Make sure you removed all categories using this billboard first.');
+      toast.error('Primeiro, remova todas as categorias usando este banner.');
     } finally {
       setLoading(false);
       setOpen(false);
