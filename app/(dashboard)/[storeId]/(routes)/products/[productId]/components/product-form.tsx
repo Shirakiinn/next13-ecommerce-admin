@@ -197,7 +197,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
                   <Select disabled={loading} onValueChange={field.onChange} value={field.value} defaultValue={field.value}>
                     <FormControl>
                       <SelectTrigger>
-                        <SelectValue defaultValue={field.value} placeholder="Select a category" />
+                        <SelectValue defaultValue={field.value} placeholder="Selecione uma categoria" />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
@@ -219,7 +219,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
                   <Select disabled={loading} onValueChange={field.onChange} value={field.value} defaultValue={field.value}>
                     <FormControl>
                       <SelectTrigger>
-                        <SelectValue defaultValue={field.value} placeholder="Select a size" />
+                        <SelectValue defaultValue={field.value} placeholder="Selecione um tamanho" />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
@@ -268,10 +268,10 @@ export const ProductForm: React.FC<ProductFormProps> = ({
                   </FormControl>
                   <div className="space-y-1 leading-none">
                     <FormLabel>
-                      Featured
+                      Destacado
                     </FormLabel>
                     <FormDescription>
-                      This product will appear on the home page
+                      Esse produto aparecerá na página home
                     </FormDescription>
                   </div>
                 </FormItem>
@@ -291,10 +291,10 @@ export const ProductForm: React.FC<ProductFormProps> = ({
                   </FormControl>
                   <div className="space-y-1 leading-none">
                     <FormLabel>
-                      Archived
+                      Arquivado
                     </FormLabel>
                     <FormDescription>
-                      This product will not appear anywhere in the store.
+                      Esse produto não aparecerá mais na loja
                     </FormDescription>
                   </div>
                 </FormItem>
