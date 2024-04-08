@@ -50,7 +50,7 @@ export function MainNav({
     },
     {
       href: `/${params.storeId}/settings`,
-      label: 'Confugurações',
+      label: 'Configurações',
       active: pathname === `/${params.storeId}/settings`,
     },
   ]
