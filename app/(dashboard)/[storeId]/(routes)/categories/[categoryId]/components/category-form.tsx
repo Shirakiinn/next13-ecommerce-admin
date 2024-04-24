@@ -86,7 +86,7 @@ export const CategoryForm: React.FC<CategoryFormProps> = ({
       router.push(`/${params.storeId}/categories`);
       toast.success('Categoria apagada.');
     } catch (error: any) {
-      toast.error('Make sure you removed all products using this category first.');
+      toast.error('Primeiro, apague todos os produtos utilizando esta categoria.');
     } finally {
       setLoading(false);
       setOpen(false);
@@ -123,7 +123,7 @@ export const CategoryForm: React.FC<CategoryFormProps> = ({
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Name</FormLabel>
+                  <FormLabel>Nome</FormLabel>
                   <FormControl>
                     <Input disabled={loading} placeholder="Nome da categoria" {...field} />
                   </FormControl>
@@ -136,7 +136,7 @@ export const CategoryForm: React.FC<CategoryFormProps> = ({
               name="billboardId"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Billboard</FormLabel>
+                  <FormLabel>Banner</FormLabel>
                   <Select disabled={loading} onValueChange={field.onChange} value={field.value} defaultValue={field.value}>
                     <FormControl>
                       <SelectTrigger>

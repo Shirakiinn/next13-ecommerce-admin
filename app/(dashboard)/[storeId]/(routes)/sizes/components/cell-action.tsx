@@ -34,10 +34,10 @@ export const CellAction: React.FC<CellActionProps> = ({
     try {
       setLoading(true);
       await axios.delete(`/api/${params.storeId}/sizes/${data.id}`);
-      toast.success('Size deleted.');
+      toast.success('Tamanho apagado.');
       router.refresh();
     } catch (error) {
-      toast.error('Make sure you removed all products using this size first.');
+      toast.error('Primeiro, apague todos os produtos utilizando este tamanho.');
     } finally {
       setOpen(false);
       setLoading(false);
@@ -46,7 +46,7 @@ export const CellAction: React.FC<CellActionProps> = ({
 
   const onCopy = (id: string) => {
     navigator.clipboard.writeText(id);
-    toast.success('Size ID copied to clipboard.');
+    toast.success('ID de tamanho copiada.');
   }
 
   return (
