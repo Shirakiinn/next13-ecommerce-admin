@@ -20,7 +20,11 @@ export default async function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider appearance={{
+      elements: {
+        footer: "hidden",
+      },
+    }}>
       <html lang="pt-BR">
         <body className={inter.className}>
           <ThemeProvider 
