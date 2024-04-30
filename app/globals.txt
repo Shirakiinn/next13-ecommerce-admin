@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+:root {
+  height: 100%;
+}
+
+@layer base {
+  /* Tema Claro */
+  :root {
+    /* Fundo */
+    --background: #222222; /* Cinza Escuro */
+
+    /* Texto principal */
+    --foreground: #949494; /* Cinza Claro */
+ 
+    /* Fundo Mudo */
+    --muted: #989898; /* Cinza Claro */
+    --muted-foreground: #989898; /* Cinza Claro */
+ 
+    /* Popover */
+    --popover: #949494; /* Cinza Claro */
+    --popover-foreground: #949494; /* Cinza Claro */
+ 
+    /* Cartão */
+    --card: #949494; /* Cinza Claro */
+    --card-foreground: #949494; /* Cinza Claro */
+ 
+    /* Borda */
+    --border: #989898; /* Cinza Claro */
+    --input: #989898; /* Cinza Claro */
+ 
+    /* Cor Primária */
+    --primary: #949494; /* Cinza Claro */
+    --primary-foreground: #949494; /* Cinza Claro */
+ 
+    /* Cor Secundária */
+    --secondary: #989898; /* Cinza Claro */
+    --secondary-foreground: #949494; /* Cinza Claro */
+ 
+    /* Destaque */
+    --accent: #989898; /* Cinza Claro */
+    --accent-foreground: #949494; /* Cinza Claro */
+ 
+    /* Cor Destrutiva */
+    --destructive: #949494; /* Cinza Claro */
+    --destructive-foreground: #949494; /* Cinza Claro */
+ 
+    /* Anel */
+    --ring: #989898; /* Cinza Claro */
+ 
+    /* Raio */
+    --radius: 0.5rem;
+  }
+ 
+  /* Tema Escuro */
+  .dark {
+    /* Fundo */
+    --background: #949494; /* Cinza Claro */
+
+    /* Texto principal */
+    --foreground: #949494; /* Cinza Claro */
+ 
+    /* Fundo Mudo */
+    --muted: #989898; /* Cinza Claro */
+    --muted-foreground: #989898; /* Cinza Claro */
+ 
+    /* Popover */
+    --popover: #949494; /* Cinza Claro */
+    --popover-foreground: #949494; /* Cinza Claro */
+ 
+    /* Cartão */
+    --card: #949494; /* Cinza Claro */
+    --card-foreground: #949494; /* Cinza Claro */
+ 
+    /* Borda */
+    --border: #989898; /* Cinza Claro */
+    --input: #989898; /* Cinza Claro */
+ 
+    /* Cor Primária */
+    --primary: #949494; /* Cinza Claro */
+    --primary-foreground: #949494; /* Cinza Claro */
+ 
+    /* Cor Secundária */
+    --secondary: #989898; /* Cinza Claro */
+    --secondary-foreground: #949494; /* Cinza Claro */
+ 
+    /* Destaque */
+    --accent: #989898; /* Cinza Claro */
+    --accent-foreground: #949494; /* Cinza Claro */
+ 
+    /* Cor Destrutiva */
+    --destructive: #949494; /* Cinza Claro */
+    --destructive-foreground: #949494; /* Cinza Claro */
+ 
+    /* Anel */
+    --ring: #989898; /* Cinza Claro */
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
