@@ -66,21 +66,21 @@ export const CellAction: React.FC<CellActionProps> = ({
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
-          <DropdownMenuLabel>Actions</DropdownMenuLabel>
+          <DropdownMenuLabel>Ações</DropdownMenuLabel>
           <DropdownMenuItem
             onClick={() => onCopy(data.id)}
           >
-            <Copy className="mr-2 h-4 w-4" /> Copy Id
+            <Copy className="mr-2 h-4 w-4" /> Copiar ID
           </DropdownMenuItem>
           <DropdownMenuItem
             onClick={() => router.push(`/${params.storeId}/categories/${data.id}`)}
           >
-            <Edit className="mr-2 h-4 w-4" /> Update
+            <Edit className="mr-2 h-4 w-4" /> Editar
           </DropdownMenuItem>
           <DropdownMenuItem
             onClick={() => setOpen(true)}
           >
-            <Trash className="mr-2 h-4 w-4" /> Delete
+            <Trash className="mr-2 h-4 w-4" /> Apagar
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>

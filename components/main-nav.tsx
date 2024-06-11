@@ -1,9 +1,9 @@
 "use client";
 
-import Link from "next/link"
+import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 export function MainNav({
   className,
@@ -53,7 +53,7 @@ export function MainNav({
       label: 'Configurações',
       active: pathname === `/${params.storeId}/settings`,
     },
-  ]
+  ];
 
   return (
     <nav
@@ -65,13 +65,13 @@ export function MainNav({
           key={route.href}
           href={route.href}
           className={cn(
-            'text-sm font-medium transition-colors hover:text-primary',
+            'text-sm font-bold transition-colors hover:text-primary',
             route.active ? 'text-black dark:text-white' : 'text-muted-foreground'
           )}
         >
           {route.label}
-      </Link>
+        </Link>
       ))}
     </nav>
-  )
+  );
 };
